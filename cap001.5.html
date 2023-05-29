@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Horas</title>
+  <style>
+    /* Estilos CSS para o resultado */
+    #resultado {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function calcularHoras() {
+      var dias = parseInt(document.getElementById('dias').value);
+      var totalHoras = dias * 24;
+      document.getElementById('resultado').innerText = "Total de horas: " + totalHoras;
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Horas</h1>
+
+  <label for="dias">Nº de dias:</label>
+  <input type="number" id="dias" />
+
+  <button onclick="calcularHoras()">Calcular</button>
+
+  <div id="resultado"></div>
+</body>
+</html>
